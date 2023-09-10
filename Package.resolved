@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "shareddatamodels-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Tap-Payments/SharedDataModels-iOS.git",
+      "state" : {
+        "revision" : "2177e896db70dc9d24bc4b9bc96b89c620b057eb",
+        "version" : "0.0.5"
+      }
+    },
+    {
+      "identity" : "tapcardvlidatorkit-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Tap-Payments/TapCardVlidatorKit-iOS.git",
+      "state" : {
+        "revision" : "61e2949915e2a210d89a57f450cba54d7aac551f",
+        "version" : "1.0.24"
+      }
+    }
+  ],
+  "version" : 2
+}

@@ -1,1 +1,3 @@
-# TapCardScannerWebWrapper-iOS
+# TapCardScannerWebWrapper-iOS 
+
+A description of this package.
