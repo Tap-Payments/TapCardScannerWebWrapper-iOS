@@ -29,7 +29,12 @@ let package = Package(
             name: "TapCardScannerWebWrapper-iOS",
             dependencies: ["TapCardVlidatorKit-iOS",
                            "SharedDataModels-iOS"],
-            resources: [.process("Assets")]),
+            resources: [.copy("Assets/BlurHoleCorners.xib"),
+                        .copy("Assets/TapScannerStoryboard.storyboard"),
+                        .copy("Assets/BottomLeftCorner.png"),
+                        .copy("Assets/BottomRightCorner.png"),
+                        .copy("Assets/TopLeftCorner.png"),
+                        .copy("Assets/TopRightCorner.png")]),
     ],
     swiftLanguageVersions: [.v5]
 )

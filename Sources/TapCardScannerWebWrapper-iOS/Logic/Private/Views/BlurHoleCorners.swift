@@ -39,7 +39,7 @@ class BlurHoleCorners: UIView {
     
     /// Add the XIB
     internal func loadXIB() {
-        guard let nibs = Bundle(for: Self.self).loadNibNamed("BlurHoleCorners", owner: self, options: nil),
+        guard let nibs = Bundle.currentBundle.loadNibNamed("BlurHoleCorners", owner: self, options: nil),
               nibs.count > 0, let loadedView:UIView = nibs[0] as? UIView else { fatalError("Couldn't load Xib BlurHoleCorners") }
         
         let newContainerView = loadedView
@@ -54,7 +54,7 @@ class BlurHoleCorners: UIView {
     }
     
     internal func updateCorners(with status:ScanningCornersColors) {
-        let bundle = Bundle(for: Self.self)
+        let bundle = Bundle.currentBundle
         corners.forEach{ $0.image = UIImage(named: status.imageName(for: ScanningCorner.init(rawValue: $0.tag) ?? .topLeft), in: bundle, compatibleWith: nil) }
     }
     

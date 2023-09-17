@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E86B81882AB751C200CD1B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B81872AB751C200CD1B6D /* AppDelegate.swift */; };
+		E86B818A2AB751C200CD1B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B81892AB751C200CD1B6D /* SceneDelegate.swift */; };
+		E86B818C2AB751C200CD1B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B818B2AB751C200CD1B6D /* ViewController.swift */; };
+		E86B818F2AB751C200CD1B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86B818D2AB751C200CD1B6D /* Main.storyboard */; };
+		E86B81912AB751C400CD1B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E86B81902AB751C400CD1B6D /* Assets.xcassets */; };
+		E86B81942AB751C400CD1B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86B81922AB751C400CD1B6D /* LaunchScreen.storyboard */; };
+		E86B819F2AB751FA00CD1B6D /* TapCardScannerWebWrapper-iOS in Frameworks */ = {isa = PBXBuildFile; productRef = E86B819E2AB751FA00CD1B6D /* TapCardScannerWebWrapper-iOS */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E86B81842AB751C200CD1B6D /* TapScannerSDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapScannerSDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E86B81872AB751C200CD1B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E86B81892AB751C200CD1B6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E86B818B2AB751C200CD1B6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E86B818E2AB751C200CD1B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E86B81902AB751C400CD1B6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E86B81932AB751C400CD1B6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E86B81952AB751C400CD1B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E86B819C2AB751EC00CD1B6D /* TapCardScannerWebWrapper-iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "TapCardScannerWebWrapper-iOS"; path = ..; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E86B81812AB751C200CD1B6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E86B819F2AB751FA00CD1B6D /* TapCardScannerWebWrapper-iOS in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E86B817B2AB751C200CD1B6D = {
+			isa = PBXGroup;
+			children = (
+				E86B819B2AB751EC00CD1B6D /* Packages */,
+				E86B81862AB751C200CD1B6D /* TapScannerSDKExample */,
+				E86B81852AB751C200CD1B6D /* Products */,
+				E86B819D2AB751FA00CD1B6D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E86B81852AB751C200CD1B6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E86B81842AB751C200CD1B6D /* TapScannerSDKExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E86B81862AB751C200CD1B6D /* TapScannerSDKExample */ = {
+			isa = PBXGroup;
+			children = (
+				E86B81872AB751C200CD1B6D /* AppDelegate.swift */,
+				E86B81892AB751C200CD1B6D /* SceneDelegate.swift */,
+				E86B818B2AB751C200CD1B6D /* ViewController.swift */,
+				E86B818D2AB751C200CD1B6D /* Main.storyboard */,
+				E86B81902AB751C400CD1B6D /* Assets.xcassets */,
+				E86B81922AB751C400CD1B6D /* LaunchScreen.storyboard */,
+				E86B81952AB751C400CD1B6D /* Info.plist */,
+			);
+			path = TapScannerSDKExample;
+			sourceTree = "<group>";
+		};
+		E86B819B2AB751EC00CD1B6D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				E86B819C2AB751EC00CD1B6D /* TapCardScannerWebWrapper-iOS */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		E86B819D2AB751FA00CD1B6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E86B81832AB751C200CD1B6D /* TapScannerSDKExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E86B81982AB751C400CD1B6D /* Build configuration list for PBXNativeTarget "TapScannerSDKExample" */;
+			buildPhases = (
+				E86B81802AB751C200CD1B6D /* Sources */,
+				E86B81812AB751C200CD1B6D /* Frameworks */,
+				E86B81822AB751C200CD1B6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapScannerSDKExample;
+			packageProductDependencies = (
+				E86B819E2AB751FA00CD1B6D /* TapCardScannerWebWrapper-iOS */,
+			);
+			productName = TapScannerSDKExample;
+			productReference = E86B81842AB751C200CD1B6D /* TapScannerSDKExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E86B817C2AB751C200CD1B6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					E86B81832AB751C200CD1B6D = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E86B817F2AB751C200CD1B6D /* Build configuration list for PBXProject "TapScannerSDKExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E86B817B2AB751C200CD1B6D;
+			productRefGroup = E86B81852AB751C200CD1B6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E86B81832AB751C200CD1B6D /* TapScannerSDKExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E86B81822AB751C200CD1B6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E86B81942AB751C400CD1B6D /* LaunchScreen.storyboard in Resources */,
+				E86B81912AB751C400CD1B6D /* Assets.xcassets in Resources */,
+				E86B818F2AB751C200CD1B6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E86B81802AB751C200CD1B6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E86B818C2AB751C200CD1B6D /* ViewController.swift in Sources */,
+				E86B81882AB751C200CD1B6D /* AppDelegate.swift in Sources */,
+				E86B818A2AB751C200CD1B6D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E86B818D2AB751C200CD1B6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E86B818E2AB751C200CD1B6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E86B81922AB751C400CD1B6D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E86B81932AB751C400CD1B6D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E86B81962AB751C400CD1B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E86B81972AB751C400CD1B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E86B81992AB751C400CD1B6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G46S76PUH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TapScannerSDKExample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tap.TapScannerSDKExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E86B819A2AB751C400CD1B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G46S76PUH4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TapScannerSDKExample/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tap.TapScannerSDKExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E86B817F2AB751C200CD1B6D /* Build configuration list for PBXProject "TapScannerSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E86B81962AB751C400CD1B6D /* Debug */,
+				E86B81972AB751C400CD1B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E86B81982AB751C400CD1B6D /* Build configuration list for PBXNativeTarget "TapScannerSDKExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E86B81992AB751C400CD1B6D /* Debug */,
+				E86B819A2AB751C400CD1B6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E86B819E2AB751FA00CD1B6D /* TapCardScannerWebWrapper-iOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "TapCardScannerWebWrapper-iOS";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E86B817C2AB751C200CD1B6D /* Project object */;
+}
