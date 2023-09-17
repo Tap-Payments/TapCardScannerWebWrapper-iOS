@@ -28,7 +28,9 @@ let package = Package(
         .target(
             name: "TapCardScannerWebWrapper-iOS ",
             dependencies: ["TapCardVlidatorKit-iOS",
-                           "SharedDataModels-iOS"]),
+                           "SharedDataModels-iOS"],
+            path: "Sources",
+            resources: [.process("Sources/Assets")]),
         .testTarget(
             name: "TapCardScannerWebWrapper-iOS Tests",
             dependencies: ["TapCardScannerWebWrapper-iOS "]),
