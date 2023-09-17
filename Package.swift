@@ -29,8 +29,7 @@ let package = Package(
             name: "TapCardScannerWebWrapper-iOS",
             dependencies: ["TapCardVlidatorKit-iOS",
                            "SharedDataModels-iOS"],
-            path: "Sources",
-            resources: [.process("Sources/TapCardScannerWebWrapper-iOS/Assets")]),
+            resources: [.process("Assets")]),
     ],
     swiftLanguageVersions: [.v5]
 )

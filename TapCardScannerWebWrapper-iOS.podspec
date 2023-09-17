@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TapCardScannerWebWrapper-iOS'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'Common data models for used across different Tap sdks SharedDataModels-iOS.'
   s.homepage         = 'https://github.com/Tap-Payments/TapCardScannerWebWrapper-iOS'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
