@@ -107,6 +107,7 @@ internal final class ImageAnalyzer {
             else { continue }
             
             let string = candidate.string
+            print("SCANNED : \(string)")
             // If the detected string is one of the to skip values, then we simply Skip!
             if Regex.wordsToSkip.contains(where: { string.lowercased().contains($0) }) { continue }
             
@@ -115,6 +116,7 @@ internal final class ImageAnalyzer {
                 .replacingOccurrences(of: " ", with: "")
                 .replacingOccurrences(of: "-", with: "")
             {
+                print("SCANNED CARD NUMBER : \(cardNumber)")
                 // check again if it is a valid brand detected with this number
                 let definedCard = CardValidator.validate(cardNumber: cardNumber,preferredBrands: self?.allowedCardBrands)
                 

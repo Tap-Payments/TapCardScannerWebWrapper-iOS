@@ -98,9 +98,10 @@ final class CameraView: UIView {
     }
     
     func startSession() {
-        DispatchQueue.main.async { [weak self] in
+        DispatchQueue.background(background: { [weak self] in
+        //DispatchQueue.main.async{ [weak self] in
             self?.videoSession?.startRunning()
-        }
+        })
     }
     
     func setupCamera(with uiCustomization:TapFullScreenUICustomizer = .init()) {
@@ -281,4 +282,20 @@ extension CameraView: AVCaptureVideoDataOutputSampleBufferDelegate {
 internal extension TapCard {
     // The aspect ratio of credit-card is Golden-ratio
     static let heightRatioAgainstWidth: CGFloat = 0.6180469716
+}
+
+
+fileprivate extension DispatchQueue {
+    
+    static func background(delay: Double = 0.0, background: (()->Void)? = nil, completion: (() -> Void)? = nil) {
+        DispatchQueue.global(qos: .background).async {
+            background?()
+            if let completion = completion {
+                DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: {
+                    completion()
+                })
+            }
+        }
+    }
+
 }
