@@ -98,10 +98,10 @@ final class CameraView: UIView {
     }
     
     func startSession() {
-        DispatchQueue.background(background: { [weak self] in
-        //DispatchQueue.main.async{ [weak self] in
+        //DispatchQueue.background(background: { [weak self] in
+        DispatchQueue.main.async{ [weak self] in
             self?.videoSession?.startRunning()
-        })
+        }
     }
     
     func setupCamera(with uiCustomization:TapFullScreenUICustomizer = .init()) {
@@ -173,7 +173,7 @@ final class CameraView: UIView {
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.prominent)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = .init(x: 0, y: 0, width: bounds.width, height: bounds.height)
-        print("FRAME : \(blurEffectView.frame)")
+        //print("FRAME : \(blurEffectView.frame)")
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         blurEffectView.tag = 123123123
         

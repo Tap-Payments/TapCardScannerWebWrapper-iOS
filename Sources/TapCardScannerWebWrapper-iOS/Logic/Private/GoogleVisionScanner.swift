@@ -31,7 +31,7 @@ internal extension TapInlineCardScanner {
             }else {
                 // Convert HTTP Response Data to a String
                 if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    print("Response data string:\n \(dataString)")
+                    //print("Response data string:\n \(dataString)")
                     do {
                         // Check that google accepted the reqest and it did extract any peice of text from the given image
                         let responseDict:[String:Any] = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:Any]

@@ -38,7 +38,7 @@ import struct UIKit.CGFloat
             }
         }
         
-        print("Compression : \(compressionRate) && Size : \((Double(imageData.count) / 1000.0)) KB")
+        //print("Compression : \(compressionRate) && Size : \((Double(imageData.count) / 1000.0)) KB")
         
         let base64String = imageData.base64EncodedString()
         return base64String

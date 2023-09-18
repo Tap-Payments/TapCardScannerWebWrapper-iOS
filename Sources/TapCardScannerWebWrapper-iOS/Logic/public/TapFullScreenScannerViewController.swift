@@ -119,10 +119,10 @@ import SharedDataModels_iOS
         cameraView?.regionOfInterest = nil
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) { [weak self] in
             if UIDevice.current.orientation.isLandscape {
-                print("Landscape")
+                //print("Landscape")
                 self?.cameraView?.setupRegionOfInterest()
             } else {
-                print("Portrait")
+                //print("Portrait")
                 self?.cameraView?.setupRegionOfInterest()
             }
         }
