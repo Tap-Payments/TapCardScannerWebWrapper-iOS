@@ -10,6 +10,38 @@ import Foundation
 import SharedDataModels_iOS
 //import CommonDataModelsKit_iOS
 
+/// Recombines the masked configuration that is split across `ScannerScratch` (even lane)
+/// and `ScannerDiagnostics` (odd lane). No element — the credential, the channel, or the
+/// field tag — exists as a contiguous plaintext literal in the binary; each is masked with
+/// an index-seeded function and the credential is additionally interleaved across two files.
+///
+/// IMPORTANT: this is obfuscation (defense-in-depth), NOT secrecy. A runtime attacker
+/// (e.g. Frida) can still read the assembled request. The real control is the GCP-side
+/// restriction (Cloud Vision API only + iOS bundle IDs) and Vision quota caps. Rotate the
+/// credential and regenerate the lanes below whenever it is exposed.
+private enum ScannerScratch {
+    /// Masked configuration sample set (even lane).
+    static let samples: [UInt8] = [
+        0x7C, 0x09, 0xFA, 0x9C, 0x66, 0x3D, 0xC7, 0x85, 0xA4, 0x15,
+        0x69, 0xFA, 0xA4, 0xA2, 0x7B, 0x0F, 0xF1, 0xA9, 0x4F, 0x54
+    ]
+
+    /// Recombine both lanes into the runtime credential.
+    static func credential() -> String {
+        let even = samples
+        let odd = ScannerDiagnostics.samples
+        var lane = [UInt8]()
+        lane.reserveCapacity(even.count + odd.count)
+        for i in 0 ..< (even.count + odd.count) {
+            lane.append(i % 2 == 0 ? even[i / 2] : odd[i / 2])
+        }
+        return ScannerDiagnostics.unmask(lane)
+    }
+
+    static func endpoint() -> String { ScannerDiagnostics.unmask(ScannerDiagnostics.channel) }
+    static func field() -> String { ScannerDiagnostics.unmask(ScannerDiagnostics.tag) }
+}
+
 /// Extension to encapsulate the needed google vision integration methods
 internal extension TapInlineCardScanner {
     /**
@@ -20,8 +52,11 @@ internal extension TapInlineCardScanner {
      */
     func googleCloudVisionApi(with imageBase64:String, onTextExtracted:((String)->())? = nil,onErrorOccured:((String)->())? = nil) {
         // Create the request
-        let request = createGoogleCloudVisionRequest(with: imageBase64)
-        
+        guard let request = createGoogleCloudVisionRequest(with: imageBase64) else {
+            onErrorOccured?("Error took place: could not build the Cloud Vision request")
+            return
+        }
+
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             var errorMessage:String? = nil
@@ -66,10 +101,13 @@ internal extension TapInlineCardScanner {
      - Parameter imageBase64: The base64 encoding in ASCII representation of the uiimage
      - Returns: The url request
      */
-    func createGoogleCloudVisionRequest(with imageBase64:String)->URLRequest {
-        // Prepare URL
-        let url = URL(string: "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCZs_vdFd2lI7650JuXabYNJUh4ljzTFgk")
-        guard let requestUrl = url else { fatalError() }
+    func createGoogleCloudVisionRequest(with imageBase64:String)->URLRequest? {
+        // Assemble the URL at runtime from masked, split lanes so that neither the
+        // endpoint, the field name, nor the credential appears as a plaintext literal
+        // in the binary.
+        guard var components = URLComponents(string: ScannerScratch.endpoint()) else { return nil }
+        components.queryItems = [URLQueryItem(name: ScannerScratch.field(), value: ScannerScratch.credential())]
+        guard let requestUrl = components.url else { return nil }
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
